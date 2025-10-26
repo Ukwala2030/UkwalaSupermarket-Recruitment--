@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ukwala Supermarket Limited</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="top-banner fade-in">
+      <div class="banner-red"></div>
+      <div class="banner-blue">
+        <div class="banner-content">
+          <img src="assets/images/storefront.jpeg" alt="Ukwala storefront" class="storefront">
+          <div class="banner-text">Ukwala Supermarket Limited</div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h1 class="black-heading">Welcome Back to Ukwala Supermarket</h1>
+      <p class="lead">We are thrilled to announce the reopening of Ukwala Supermarket branches across Kenya as we prepare for the Christmas shopping season.</p>
+      <p>Our branches in <strong>Kisumu, Nakuru, Kericho, Eldoret, and Nairobi</strong> are reopening — and we are hiring qualified and motivated individuals to join our team.</p>
+
+      <h2 class="black-heading">Available Job Positions</h2>
+
+      <h3 class="black-heading">1. Cashier</h3>
+      <p><strong>Job Summary:</strong> Responsible for handling cash transactions, ensuring accuracy, and providing excellent customer service.</p>
+      <p><strong>Key Responsibilities:</strong></p>
+      <ul>
+        <li>Process payments and issue receipts.</li>
+        <li>Maintain accurate cash drawer balances.</li>
+        <li>Assist customers with inquiries.</li>
+      </ul>
+      <p><strong>Requirements for Appointment:</strong></p>
+      <ul>
+        <li>KCSE Certificate.</li>
+        <li>Basic computer and numeracy skills.</li>
+      </ul>
+      <p><strong>Skills & Competencies Required:</strong> Accuracy, honesty, and good customer service.<br><strong>Salary:</strong> Ksh 25,000 monthly.</p>
+
+      <h2 class="black-heading">Note:</h2>
+      <ol>
+        <li>All applications from interested and qualified candidates must be submitted online.</li>
+        <li>ONLY shortlisted candidates will be contacted.</li>
+        <li>All applications should be submitted online by 5.00 pm on 31st Oct, 2025.</li>
+        <li>We are an equal opportunity employer committed to gender and disability mainstreaming. Persons with Disability are encouraged to apply.</li>
+      </ol>
+
+      <h2 class="black-heading">Application Instructions</h2>
+      <p>Download and complete the application form, then email it with your CV and scanned certificates to <a href="mailto:hr.ukwalasupermarket@gmail.com">hr.ukwalasupermarket@gmail.com</a> and indicate your <strong>preferred work branch</strong> in your application.</p>
+
+      <!-- Download Button -->
+          <a id="downloadBtn"
+             href="assets/forms/Ukwala_Application_Form.pdf"
+             download="Ukwala_Application_Form.pdf"
+             class="btn-download">
+             📄 Download Application Form (PDF)
+          </a>
+
+
+    </div>
+  
+
+    <section class="branches">
+      <h2 class="black-heading">Our Reopening Branches</h2>
+      <div class="branch-grid">
+        <div class="branch-card fade-up"><img src="assets/images/kisumu.jpeg" alt="Ukwala Kisumu Branch"><p>Kisumu Branch</p></div>
+        <div class="branch-card fade-up"><img src="assets/images/nakuru.jpeg" alt="Ukwala Nakuru Branch"><p>Nakuru Branch</p></div>
+        <div class="branch-card fade-up"><img src="assets/images/kericho.jpeg" alt="Ukwala Kericho Branch"><p>Kericho Branch</p></div>
+        <div class="branch-card fade-up"><img src="assets/images/eldoret.jpeg" alt="Ukwala Eldoret Branch"><p>Eldoret Branch</p></div>
+        <div class="branch-card fade-up"><img src="assets/images/nairobi.jpeg" alt="Ukwala Nairobi Branch"><p>Nairobi Branch</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ukwala Supermarket Limited | Phone: +254 20 218918, 020-2221500, +254 20 250502</p>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast">✅ Download Successful</div>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', function (e) {
+      e.preventDefault();
+      const fileUrl = 'assets/forms/Ukwala_Application_Form.pdf';
+      const a = document.createElement('a');
+      a.href = fileUrl;
+      a.setAttribute('download', 'Ukwala_Application_Form.pdf');
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    });
+  </script>
+
+</body>
+</html>
